@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+<section id="bio" class="p-5">
+    <h3>Обо мне</h3>
+    <div class="d-flex justify-content-between">
+        <div class="profile-description">
+            <p style=""> Здравствуйте, меня зовут Алексей с 2022 года занимаюсь разработкой и поддержкой сервисов на
+                Python в
+                команде из 6 человек. Разрабатываю микросервисы для автоматизации работы сотрудников, делаю интеграции
+                со сторонними API и интеграции с БД, провожу код ревью, пишу документацию. Обладаю пониманием
+                инструментов CI/CD и принципами SOLID.
+            </p>
+
+            <p><b>Стек технологий:</b> Python, Django, PostgreSql, SqlAlchemy, Alembic, Pydantic, Docker, Linux, Git,
+                Redis,
+                Celery, Black</p>
+
+            <p style="">
+            <p>
+                Мои увлечения разнообразны и включают в себя множество интересных занятий. Это караоке и танцы,
+                компьюетрные игры и чтение книг, игра на гитаре и 3д печать. Также я занимаюсь спортом и хожу в
+                сопртивный зал.
+
+            </p>
+        </div>
+        <div class="profile-image">
+            <img src="/static/main/img/profile_pic.JPG" alt="Тут я!" id="profile_pic">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="works">
+    <h3>Примеры работ</h3>
+    <table class="table">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Название</th>
+            <th scope="col">Описание</th>
+            <th scope="col">Ссылка на гит</th>
+            <th scope="col">Ссылка на сайт</th>
+        </thead>
+        <tbody>
+            {% for work in works %}
+                <tr>
+                    <th scope="row">{{ work.id }}</th>
+                    <td>{{ work.name }}</td>
+                    <td>
+                        {{ work.description|default(' ') }}
+                    </td>
+                    <td><a href="{{ work.git_url }}" class="link" target="_blank">{{ work.git_url }}</a></td>
+                    <td><a href="{{ work.site_url|default('#', true) }}" class="link" target="_blank">{{ work.site_url|default('#', true) }}</a></td>
+                </tr>
+
+
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+
+
+</section>
+
+
+
+
+
+<div>
+
+    <section>
+
+    </section>
+
+
+</div>
+
+
+{% endblock %}

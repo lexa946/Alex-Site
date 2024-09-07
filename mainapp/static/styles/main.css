@@ -1,0 +1,61 @@
+
+body {
+    background-image: url("/static/main/background.jpg");
+    min-height: 100%;
+}
+
+
+nav {
+    font-size: 2em;
+}
+
+nav li {
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+
+
+.main-body {
+    background-color: rgb(255, 255, 255, 90%);
+    max-width: 1400px;
+    alight: center;
+    max-height: 100%;
+}
+
+
+.profile-image {
+    padding: 2%;
+    background-color: rgb(207, 214, 230);
+    border-radius: 15px;
+    max-height: 800px;
+
+}
+
+.profile-image img {
+    display: block;
+    max-height: 600px;
+    width: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding:0 30%;
+}
+
+footer li {
+    color: white;
+    background-color: black;
+}
+
+.profile-description {
+   padding: 5%;
+   font-size: 1.2rem;
+}
+
+#works {
+   padding: 5%;
+   font-size: 1.2rem;
+
+}
