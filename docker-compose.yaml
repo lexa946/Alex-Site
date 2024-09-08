@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  site:
+    image: 2312312
+    ports:
+      - "8080:80"
+
+  tasker:
+    image: 213231
+    ports:
+      - "8081:80"
+
+
+  pastbeen:
+    image: d312
+    ports:
+      - "8082:80"
+
+
+
