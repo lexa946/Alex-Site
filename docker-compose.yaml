@@ -2,17 +2,20 @@ version: "3"
 
 services:
   site:
+    restart: always
     image: 2312312
     ports:
       - "8080:80"
 
   tasker:
+    restart: always
     image: 213231
     ports:
       - "8081:80"
 
 
   pastbeen:
+    restart: always
     image: d312
     ports:
       - "8082:80"
