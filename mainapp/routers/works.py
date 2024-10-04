@@ -14,7 +14,7 @@ router = APIRouter(prefix='/works', tags=['Работы'])
 @router.get('/')
 async def get_all_works(db: Annotated[AsyncSession, Depends(get_db)]) -> list[SWork]:
     works = await db.scalars(
-        select(WorkOrm)
+        select(WorkOrm).order_by(WorkOrm.id.asc())
     )
     works = works.all()
     works = [SWork.model_validate({
