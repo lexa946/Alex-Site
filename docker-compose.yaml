@@ -20,5 +20,18 @@ services:
     ports:
       - "8082:80"
 
+  anekdot:
+    restart: always
+    image: anekdot:latest
+    ports:
+      - "8083:80"
+
+  forum:
+    restart: always
+    image: forum:latest
+    ports:
+      - "8084:80"
+
+
 
 
