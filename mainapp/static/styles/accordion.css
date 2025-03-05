@@ -1,0 +1,81 @@
+/* Стили для аккордеона */
+.accordion-item {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff; /* Белый фон для каждого элемента */
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для разделения элементов */
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #1e40af; /* Синий цвет для заголовков */
+    font-weight: 600;
+}
+
+.accordion-button:hover {
+    background-color: #cbd0dc; /* Светлый фон при наведении */
+    border-radius: 8px;
+}
+
+.accordion-button i {
+    transition: transform 0.3s ease;
+    color: #1e40af; /* Синий цвет для иконки */
+}
+
+.accordion-button.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    /*background-color: #f9fafb; !* Светлый фон для контента *!*/
+    /*border-radius: 0 0 8px 8px;*/
+}
+
+.accordion-content.open {
+    max-height: 500px; /* Максимальная высота контента */
+    padding: 16px;
+}
+
+.accordion-content a {
+    color: #3b82f6; /* Синий цвет для ссылок */
+    text-decoration: none;
+}
+
+.accordion-content a:hover {
+    text-decoration: underline;
+}
+
+.technologies ul {
+    margin-top: 8px;
+    color: #4b5563; /* Серый цвет для текста технологий */
+}
+
+.technologies h4 {
+    color: #1e40af; /* Синий цвет для заголовка "Используемые технологии" */
+    font-weight: 600;
+}
+
+.accordion-content .flex {
+    display: flex;
+    gap: 20px; /* Отступ между текстом и картинкой */
+}
+
+.accordion-content img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Чтобы изображение сохраняло пропорции */
+}

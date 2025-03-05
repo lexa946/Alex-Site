@@ -1,0 +1,36 @@
+/* Стили для кнопок проектов */
+.project-links {
+    display: flex;
+    gap: 10px; /* Отступ между кнопками */
+    margin-top: 16px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3b82f6; /* Синий фон */
+    color: white; /* Белый текст */
+    border-radius: 25px; /* Закругленные углы */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #2563eb; /* Темно-синий при наведении */
+    transform: translateY(-2px); /* Легкий подъем */
+}
+
+.project-link i {
+    margin-right: 8px; /* Отступ между иконкой и текстом */
+}
+
+/* Стили для кнопки GitHub */
+.github-link {
+    background-color: #1e40af; /* Темно-синий фон */
+}
+
+.github-link:hover {
+    background-color: #1e3a8a; /* Еще темнее при наведении */
+}

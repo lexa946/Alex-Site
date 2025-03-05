@@ -1,21 +1,13 @@
-from typing import Annotated
-
-from fastapi import APIRouter, Request, Depends
+from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
-from sqlalchemy.ext.asyncio import AsyncSession
 
-from mainapp.backend.db import get_db
-from mainapp.routers.works import get_all_works
+from mainapp.bio import bio
 
-router = APIRouter(prefix="/main", tags=['Main'])
+
+router = APIRouter(prefix="", tags=['Main'])
 templates = Jinja2Templates(directory="mainapp/templates")
 
 
-@router.get('/')
-async def index(db: Annotated[AsyncSession, Depends(get_db)], request: Request) -> HTMLResponse:
-    works = await get_all_works(db)
-
-    return templates.TemplateResponse(r"index.html", {
-        "request": request, "works": works,
-    })
+@router.get("/")
+async def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request, "data": bio})

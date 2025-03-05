@@ -1,10 +1,4 @@
-from fastapi import FastAPI
-from starlette.staticfiles import StaticFiles
+import uvicorn
+from mainapp.app import app
 
-from mainapp.routers import main
-
-app = FastAPI()
-app.include_router(main.router)
-app.mount('/static/main', StaticFiles(directory='mainapp/static'), 'main_static')
-
-#TODO: переделай хранение проектов на посгрю
+uvicorn.run(app, host="127.0.0.1", port=8000)

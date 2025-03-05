@@ -1,36 +1,12 @@
-version: "3"
-
 services:
-  site:
-    restart: always
-    image: 2312312
+  pozhar_site:
+    restart: unless-stopped
+    image: pozhar_site:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
     ports:
-      - "8080:80"
-
-  tasker:
-    restart: always
-    image: 213231
-    ports:
-      - "8081:80"
-
-
-  pastbeen:
-    restart: always
-    image: d312
-    ports:
-      - "8082:80"
-
-  anekdot:
-    restart: always
-    image: anekdot:latest
-    ports:
-      - "8083:80"
-
-  forum:
-    restart: always
-    image: forum:latest
-    ports:
-      - "8084:80"
+      - "8086:80"
 
 
 

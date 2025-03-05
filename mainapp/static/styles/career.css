@@ -1,0 +1,135 @@
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #3b82f6;
+    transform: translateX(-50%);
+}
+
+.timeline-step {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-step:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+.timeline-step:nth-child(odd) .description {
+    text-align: left;
+}
+
+.timeline-step:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-step:nth-child(odd) .timeline-circle {
+    right: -10px;
+}
+
+.timeline-step:nth-child(even) .timeline-circle {
+    left: -10px;
+}
+
+.timeline-circle {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #3b82f6;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-width 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.timeline-circle:hover {
+    transform: scale(1.5) translateY(-50%);
+    border-width: 6px;
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.2);
+}
+
+
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-step:nth-child(odd) .timeline-content {
+    margin-right: 30px;
+}
+
+.timeline-step:nth-child(even) .timeline-content {
+    margin-left: 30px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.description.visible {
+    opacity: 1;
+    max-height: 210px;
+}
+
+/* Стили для подсказки "Кликни" */
+.click-hint {
+    position: absolute;
+    top: -5px; /* Расположение над кружком */
+    left: 100%; /* Смещаем подсказку вправо от кружка */
+    margin-left: 10px; /* Отступ от кружка */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.click-text {
+    font-size: 14px;
+    color: #3b82f6;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+/* Стили для стрелки */
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #3b82f6; /* Стрелка указывает влево */
+    animation: bounce 1s infinite; /* Анимация стрелки */
+}
+
+/* Анимация стрелки */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
