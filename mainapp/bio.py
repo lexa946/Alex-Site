@@ -117,6 +117,17 @@ bio = {
             }
         },
         {
+            "title": "Сайт анекдотов",
+            "description": "Приложение для просмотра анекдотов.",
+            "technologies": ["Python", "JavaScript", "SqlALchemy", "Pydantic",
+                             "Jinja2", "aiohttp", "BeautifulSoup4", "Docker"],
+            "image": "/images/projects_pic/anekdots.png",
+            "links": {
+                "git": "https://github.com/lexa946/anekdots",
+                "project": "https://anekdots.pozhar.keenetic.pro/"
+            }
+        },
+        {
             "title": "ТГ бот игра \"Лабиринт Страха\"",
             "description": "Перенес текстовый квест на бота в телеграме.",
             "technologies": ["Python", "Aiogram", "SqlALchemy", "Pydantic", "Docker"],
@@ -136,15 +147,18 @@ bio = {
                 "project": "https://t.me/training_fitnes_bot"
             }
         },
-        # {
-        #     "title": "ТГ бот для фитнес клуба",
-        #     "description": "Бот для регистрации клиентов к своим тренерам.",
-        #     "technologies": ["Python", "Aiogram", "SqlALchemy", "Pydantic", "APSScheduler", "Docker"],
-        #     "links": {
-        #         "git": "https://github.com/lexa946/labirint_bot",
-        #         "project": "https://t.me/labirint_fear_bot"
-        #     }
-        # },
+        {
+            "title": "ТГ бот Песенник для гитары",
+            "description": "Бот парсит нужные вам песни с сайта и присылает в удобном формате.",
+            "technologies": ["Python", "python-telegram-bot", "SqlALchemy", "Pydantic",
+                             "Requests", "BeautifulSoup4", "Docker"],
+            "image": "/images/projects_pic/guitar_bot.png",
+            "links": {
+                "git": "https://github.com/lexa946/amdm_tgbot",
+                "project": "https://t.me/songs_for_guitar_bot"
+            }
+        },
+
     ]
 
 }
