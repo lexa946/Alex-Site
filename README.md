@@ -1,5 +1,3 @@
 ﻿# Alex-Site
 
-Переходи по ссылке http://alex.pozharsite.ru/main/
-
-docker build . --tag site && docker run -p 80:80 site 
+Переходи по ссылке https://site.pozhar.keenetic.pro/

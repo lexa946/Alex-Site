@@ -119,12 +119,23 @@ bio = {
         {
             "title": "Сайт анекдотов",
             "description": "Приложение для просмотра анекдотов.",
-            "technologies": ["Python", "JavaScript", "SqlALchemy", "Pydantic",
+            "technologies": ["Python", "JavaScript", "Fastapi", "SqlALchemy", "Pydantic",
                              "Jinja2", "aiohttp", "BeautifulSoup4", "Docker"],
             "image": "/images/projects_pic/anekdots.png",
             "links": {
                 "git": "https://github.com/lexa946/anekdots",
                 "project": "https://anekdots.pozhar.keenetic.pro/"
+            }
+        },
+        {
+            "title": "Сайт анекдотов",
+            "description": "Приложение для просмотра анекдотов.",
+            "technologies": ["Python", "JavaScript", "Fastapi", "SqlALchemy", "Pydantic",
+                             "Jinja2",  "Minio", "Docker"],
+            "image": "/images/projects_pic/forum.png",
+            "links": {
+                "git": "https://github.com/lexa946/forum",
+                "project": "https://forum.pozhar.keenetic.pro"
             }
         },
         {
