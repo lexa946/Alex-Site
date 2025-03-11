@@ -80,7 +80,7 @@
             <h3 class="text-2xl font-semibold text-blue-400 mb-4">Портфолио</h3>
             <div class="accordion">
                 {% for project in data.portfolio %}
-                    {% if loop.index in [2] %}
+                    {% if loop.index in [2,3] %}
                         {% set size_one="w-1/2" %}
                         {% set size_two="w-1/2" %}
                     {% else %}

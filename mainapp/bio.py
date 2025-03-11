@@ -128,7 +128,7 @@ bio = {
             }
         },
         {
-            "title": "Сайт анекдотов",
+            "title": "Анонимный форум",
             "description": "Приложение для просмотра анекдотов.",
             "technologies": ["Python", "JavaScript", "Fastapi", "SqlALchemy", "Pydantic",
                              "Jinja2",  "Minio", "Docker"],
