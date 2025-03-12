@@ -11,6 +11,7 @@ bio = {
         {"name": "JavaScript", "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript",
          "icon": "devicon-javascript-plain"},
         {"name": "Django", "url": "https://www.djangoproject.com/", "icon": "devicon-django-plain"},
+        {"name": "Spark", "url": "https://spark.apache.org/", "icon": "devicon-apachespark-plain"},
         {"name": "PostgreSql", "url": "https://www.postgresql.org/", "icon": "devicon-postgresql-plain"},
         {"name": "FastAPI", "url": "https://fastapi.tiangolo.com/ru/", "icon": "devicon-fastapi-plain"},
         {"name": "SqlAlchemy", "url": "https://www.sqlalchemy.org/", "icon": "devicon-sqlalchemy-plain"},
